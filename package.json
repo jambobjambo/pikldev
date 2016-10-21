@@ -4,7 +4,9 @@
   "description": "retrival site for applications",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+
   },
   "author": "Jamie McInally",
   "license": "ISC",
@@ -14,5 +16,13 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jambobjambo/pikldev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jambobjambo/pikldev/issues"
+  },
+  "homepage": "https://github.com/jambobjambo/pikldev#readme"
 }
