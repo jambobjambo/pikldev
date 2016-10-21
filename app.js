@@ -10,11 +10,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", function(req,res){
-    res.setHeader('Content-Type', 'application/json');
-    res.write(JSON.stringify({ 'product' : 'Mens T shirt' }));
+    res.send('Hello World!');
 });
 
-app.use("/",router);
+app.use("/product", function(req,res)){
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ 'product' : 'Mens T shirt' }));
+}
 
 app.listen(3000,function(){
     console.log("Live at Port 3000");
