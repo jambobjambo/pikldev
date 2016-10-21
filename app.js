@@ -10,12 +10,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", function(req,res){
-    res.status(200).send('Hello World!');
-});
-
-app.use("/product", function(req,res){
     res.setHeader('Content-Type', 'application/json');
-    res.status(200).send(JSON.stringify({ 'product' : 'Mens T shirt' }));
+    res.send(JSON.stringify({ 'product' : 'Mens T shirt' }));
 });
 
 // Start the server
