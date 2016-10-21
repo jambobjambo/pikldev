@@ -13,10 +13,10 @@ app.use("/", function(req,res){
     res.send('Hello World!');
 });
 
-app.use("/product", function(req,res)){
+app.use("/product", function(req,res){
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({ 'product' : 'Mens T shirt' }));
-}
+});
 
 app.listen(3000,function(){
     console.log("Live at Port 3000");
