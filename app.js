@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", function(req,res){
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ 'product' : 'Mens T shirt' }));
+    res.write(JSON.stringify({ 'product' : 'Mens T shirt' }));
 });
 
 app.use("/",router);
