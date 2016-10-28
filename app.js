@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function(req,res){
-    PythonShell.run('piklimageprediction/label.py testdata/download.jpg', options, function (err, results) {
+    PythonShell.run('piklimageprediction/label.py', options, function (err, results) {
         if (err) throw err;
         // results is an array consisting of messages collected during execution
         console.log('results: %j', results);
