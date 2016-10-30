@@ -18,10 +18,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function(req,res){
     PythonShell.run('label.py', options, function (err, results) {
+        res.send("Python running")
         if (err) throw err;
         // results is an array consisting of messages collected during execution
-        console.log('results: %j', results);
+        res.send('results: %j', results);
     });
+    res.send("Welcome");
     //var image = req.query.image
     //res.setHeader('Content-Type', 'application/json');
     //res.send(JSON.stringify({ 'product' : 'Mens T shirt' }));
