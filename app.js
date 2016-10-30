@@ -9,9 +9,7 @@ var PythonShell = require('python-shell');
 
 var options = {
     mode: 'text',
-    pythonPath: 'ImageCheck',
-    pythonOptions: ['-u'],
-    scriptPath: 'ImageCheck/label.py',
+    scriptPath: 'piklimageprediction',
     args: ['testdata/download.jpg']
 };
 
@@ -19,7 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function(req,res){
-    PythonShell.run('piklimageprediction/label.py', options, function (err, results) {
+    PythonShell.run('label.py', options, function (err, results) {
         if (err) throw err;
         // results is an array consisting of messages collected during execution
         console.log('results: %j', results);
